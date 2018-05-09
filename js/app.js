@@ -1,7 +1,7 @@
 'strict'
 
 var openHours = ['6am', '7am', '8am', '9am','10am','11am','12pm', '1pm', '2pm', '3pm', '4pm','5pm','6pm','7pm','8pm'];
-var allStores=[];
+var stores=[];
 
 function SalmonStores(){
     name= '';
@@ -11,7 +11,7 @@ function SalmonStores(){
     customers = [],      //holds the number of customers for each hour
     cookiesPerHour = [];
     sumCookies = 0;
-    allStores.push(this);
+    stores.push(this);
 };
 
 var pikeStore = new SalmonStores('Pikes Place', 23, 65, 6.3);
@@ -59,7 +59,6 @@ SalmonStores.prototype.calcTotalCookies=function(){
 SalmonStores.prototype.render = function() {
 this.calcCookiesPerHour();                 //calls the calcCookiesPerHour
 
-    
 
 // grab the parent from the DOM
     var teEl = document.getElementById('table');   //creates variable called teEl and stores html id in it
