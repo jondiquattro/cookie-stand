@@ -58,106 +58,52 @@ SalmonStores.prototype.calcTotalCookies=function(){
 
 SalmonStores.prototype.render = function() {
 this.calcCookiesPerHour();                 //calls the calcCookiesPerHour
-    // grab the parent from the DOM
-    var ulEl = document.getElementById('sales')   //creates variable called ulEL and stores html id in it
-    for (var i = 0; i < this.customers.length; i++) {       //creates loop of length 14 
+
+    
+
+// grab the parent from the DOM
+    var teEl = document.getElementById('table');   //creates variable called teEl and stores html id in it
+    var trEl = document.createElement('tr'); //creates a table row
+    for (var i = 0; i < openHours.length; i++) {       //creates loop of length 14 
+
       // create an element
-      var liEl = document.createElement('li');      //creates variable to store li in
+      var tdEl = document.createElement('td');      //creates 14 table data columns
       // give the element content
-      liEl.textContent = openHours[i] + ': ' + Math.floor(this.cookiesPerHour[i]) + ' cookies'
+      tdEl.textContent =  Math.floor(this.cookiesPerHour[i]);
      
         // append the child to the parent
-      ulEl.appendChild(liEl);
+      trEl.appendChild(tdEl);
     }//ends loop
-    liEl = document.createElement('li');
-    liEl.textContent = 'Total: ' + Math.ceil(this.sumCookies) + ' cookies';
-    ulEl.appendChild(liEl);
+    //table head
+    var thEl = document.getElementById('table');
+    
+//teEl = document.createElement('th');     didn't work
+    
+
+    
+    tdEl = document.createElement('td');
+    tdEl.textContent =  Math.ceil(this.sumCookies);
+    trEl.appendChild(tdEl);
+    teEl.appendChild(trEl);
+
+
+   // thEl.appendChild(teEl); // apends teEl to thEl    didnt work
 };
 
 
-
-//   var pikesPlace = {
-    //     name: 'Pikes Place Market',
-//     minimumCustomers: 23,
-//     maxCustomers: 65,
-//     averageCookies: 6.3,
-//     customers: [],      //holds the number of customers for each hour
-//     cookiesPerHour: [],
-//     sumCookies: 0
-//   };
-
-
-//   pikesPlace.ranNumGen();
-//   pikesPlace.storeHours();
-//   pikesPlace.calcCookiesPerHour();
-//   pikesPlace.calcTotalCookies();
-//   console.log(pikesPlace.cookiesPerHour[i]);
-//   pikesPlace.render();
-
-
-  /////////////////////////////////////////////////////
-  //constructor for object
-  /////////////////////////////////////////////////////
-///////////////////////////////////////
-///////     /////////////     ////////
-/////////////////////////////////////
- ////////////          ////////////
-  ///////////         ///////////
-   ////////////////////////////
-    /////////////////////////
-
-    //num generator
-    // pikesPlace.ranNumGen=function(){
-    //     return Math.floor(Math.random() * (65 - 23 + 1) + 23);  //via MDN
-    //    };
-
-
-
-    // pikesPlace.storeHours=function(){
-       
-    //     for (var i = 0; i < 14; i++){
-
-    //         var ranNumber = this.ranNumGen();
-    //         console.log(ranNumber);
-    //         this.customers.push(ranNumber);
-                    
-    //         }
-    //    };
-
-
-    // pikesPlace.calcCookiesPerHour=function(){
-    //     for(i=0; i < this.customers.length; i++){
-    //    Math.floor(this.cookiesPerHour[i] = this.customers[i] * 6.3);//why not working
-    //     }
-
-    //     };//end function
+//please god dont delete my shit
 
 
 
 
-//     pikesPlace.calcTotalCookies=function(){
-//         this.calcCookiesPerHour
-//        for(i=0; i < this.cookiesPerHour.length; i++){
-//            this.sumCookies = this.sumCookies + this.cookiesPerHour[i];
-            
-//            }
-         
-//    }//end calctotal function
 
-// pikesPlace.render = function() {                 //makes the function
-//     pikesPlace.calcCookiesPerHour();                 //calls the calcCookiesPerHour
-//     // grab the parent from the DOM
-//     var ulEl = document.getElementById('sales')   //creates variable called ulEL and stores html id in it
-//     for (var i = 0; i < this.customers.length; i++) {       //creates loop of length 14 
-//       // create an element
-//       var liEl = document.createElement('li');      //creates variable to store li in
-//       // give the element content
-//       liEl.textContent = openHours[i] + ': ' + Math.floor(this.cookiesPerHour[i]) + ' cookies'
-     
-//         // append the child to the parent
-//       ulEl.appendChild(liEl);
-//     }//ends loop
-//     liEl = document.createElement('li');
-//     liEl.textContent = 'Total: ' + Math.ceil(this.sumCookies) + ' cookies';
-//     ulEl.appendChild(liEl);
-//   }
+
+function renderAllStores(){
+    for (var i =0; i < stores.length; i++){
+        console.log(i);
+        stores[i].render();
+    }
+};
+renderAllStores();
+
+
