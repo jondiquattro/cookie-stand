@@ -90,19 +90,6 @@ this.calcCookiesPerHour();                 //calls the calcCookiesPerHour
 };
 
 
-//please god dont delete my shit
-
-
-
-
-
-
-function renderAllStores(){
-    for (var i =0; i < stores.length; i++){
-        console.log(i);
-        stores[i].render();
-    }
-};
 renderAllStores();
 
 
