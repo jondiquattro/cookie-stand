@@ -89,7 +89,7 @@ this.calcCookiesPerHour();                 //calls the calcCookiesPerHour
    // thEl.appendChild(teEl); // apends teEl to thEl    didnt work
 };
 
-
+//please god dont delete my shit
 
 
 
