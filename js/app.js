@@ -27,9 +27,6 @@ new SalmonStores('Capitol Hill', 20, 38, 2.3);
 new SalmonStores('Alki', 2, 16, 4.6);
 			
 
-
-
-
 SalmonStores.prototype.ranNumGen=function(){
     return Math.ceil(Math.random() * ( this.maxCustomers - this.minimumCustomers + 1) + this.minimumCustomers);  //via MDN
 };
@@ -75,11 +72,8 @@ this.calcCookiesPerHour();                 //calls the calcCookiesPerHour
     }//ends loop
     //table head
     var thEl = document.getElementById('table');
-    
-//teEl = document.createElement('th');     didn't work
-    
-
-    
+    //teEl = document.createElement('th');     didn't work
+        
     tdEl = document.createElement('td');
     tdEl.textContent =  Math.ceil(this.sumCookies);
     trEl.appendChild(tdEl);
@@ -101,5 +95,6 @@ function renderAllStores(){
         console.log(i);
         stores[i].render();
     }
+    
 };
 renderAllStores();
