@@ -3,6 +3,29 @@
 var openHours = ['6am', '7am', '8am', '9am','10am','11am','12pm', '1pm', '2pm', '3pm', '4pm','5pm','6pm','7pm','8pm'];
 var stores=[];
 
+var submitForm = document.getElementById('store-form'); //attaches the html id="store-form"
+
+
+
+
+
+   
+submitForm.addEventListener('submit', storeNewinfo);   
+
+function storeNewinfo(event){
+    event.preventDefault();
+    var newStorName = event.target.store.value;
+    var minCustomers = event.target.minimumCustomersPerHour.value;
+    var maxNumbers = event.target.maxCustomersPerHour.value;
+    var averageSales = event.target.averageSalePerCustomer.value;
+    new SalmonStores(newStorName, minCustomers,maxNumbers,averageSales);
+    // document.getElementById('table').setinnerHTML('');
+    document.getElementById('table').innerHTML='';
+    renderAllStores();
+
+};
+
+
 function SalmonStores(name, minimumCustomers, maxCustomers, averageCookies ){
     this.name = name;
     this.minimumCustomers = minimumCustomers;
@@ -12,10 +35,11 @@ function SalmonStores(name, minimumCustomers, maxCustomers, averageCookies ){
     this.cookiesPerHour = [];
     this.sumCookies = 0;
     stores.push(this);
+    
 };
 
 
-
+//
 new SalmonStores ('Pikes Place', 23, 65, 6.3);
 
 new SalmonStores('SeaTac Airport', 3, 24, 1.2);
@@ -92,7 +116,7 @@ this.calcCookiesPerHour();                 //calls the calcCookiesPerHour
 
 function renderAllStores(){
     for (var i =0; i < stores.length; i++){
-        console.log(i);
+        // console.log(i);
         stores[i].render();
     }
     

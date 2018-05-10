@@ -8,21 +8,50 @@
     <link type="text/css" rel="stylesheet" href=css/style.css />
     <title>Document</title>
 </head>
-<header><h1 id="my-h1">Pats Salmon Sales</h1></header>
+<!-- <img id="headerpic" src="img/salmon.png" alt="header background image of salmon" width=1000 height=200 align="center" id="backGroundImage"> -->
+<header><h1 id="my-h1" >Pats Salmon Sales</h1></header>
 <table>
-<td id="linksRow"><h2>Home</h2></td><td id="linksRow">Sales</td>
 
-</table>
 <body>
+        <div id="upperDiv">
+                <img id="headerpic" src="img/salmon.png" alt="header background image of salmon" width=1000 height=200 align="center" id="backGroundImage">
+                <td id="linksRow"><h2>Home</h2></td><td id="linksRow">Sales</td>
+
+            </table>
+
+            </div>
+<div id="bottomDiv">
+        <form id="store-form">
+                <fieldset>
+                  <legend>Enter store information</legend>
+            
+                  <label for="store">Store name: </label>
+                  <input name="store" type="text" size="15" />
+            
+                  <label for="minimumCustomersPerHour">Min customer per hour </label>
+                  <input name="minimumCustomersPerHour" type="number" min="0" max = "10000" />
+
+
+                  <label for="maxCustomersPerHour">Max customers per hour </label>
+                  <input name="maxCustomersPerHour" type="number" min="0" max = "10000" />
+
+                  <label for="averageSalePerCustomer">Average sales per customer </label>
+                  <input name="averageSalePerCustomer" type="number" min="0" max = "10000" />
+
+
+                  <button type="submit">Add Store</button>
+                </fieldset>
+              </form>
+        <h2>How many people came to my store</h2>
+        <table id="table">
+    <tr>Cookie Sales</tr>
+    
+        </table>
+</div>
 
 
 
 
-    <h2>How many people came to my store</h2>
-    <table id="table">
-<tr>Cookie Sales</tr>
-
-    </table>
 
     <script src="js/app.js"></script>
 </body>

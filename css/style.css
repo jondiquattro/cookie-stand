@@ -1,14 +1,14 @@
 #table {
 border-style: solid;
 border-width: 10px;
-
+margin-top: 100px,
 
 }
 #table tr td {
-
+width: 30px;
 border-style: solid;
 border-width: 10px;
-
+font-weight: bold;
 }
 
 body {
@@ -16,6 +16,44 @@ background-color: rgb(241, 138, 124)
 }
 
 #linksRow{
-width: 100px;
+width: 200px;
+}
+#upperDiv tr{
+height: 200px;
+width: 1000px;
+
+
+}
+#upperDiv {
+
+    background-size: cover;
+    /* padding: 100px; */
+    height: 150px;
+
+    /* background-image: url("../img/salmon.png"); */
+    /* max-width: 100%; */
+    
+    background-repeat: no-repeat;
+    
+    opacity: 1;
+    /* filter: alpha(opacity=50); For IE8 and earlier */
+}
+#upperDiv img {
+    height: 200px;
+    width: 100%;
+}
+#bottomDiv {
+    
+    background-image: url("../img/fisher-man.jpg");
+    width: auto;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+
+
+}
+header h1{
+font-size: 55px;
 
 }
