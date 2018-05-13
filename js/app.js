@@ -75,21 +75,13 @@ SalmonStores.prototype.calcCookiesPerHour = function () {
     }
 };
 
-console.log(this.stores[0].cookiesPerHour[0]); //wont work for some unknown reason
 
-function calcHourlyTotal() {
 
-for (var i = 0; i<this.stores; i ++){
-    console.log(stores[i].cookiesPerHour[0]);
 
-var newSum =this.stores[i].cookiesPerHour[i];
-   for(var j =0; j <this.stores; j++){
-     newSum = this.stores[j].cookiesPerHour[i] + newSum;
-   }
-}
 
-};
-calcHourlyTotal();
+
+
+
 
 SalmonStores.prototype.render = function () {
     this.calcCookiesPerHour();                 //calls the calcCookiesPerHour
@@ -117,6 +109,9 @@ SalmonStores.prototype.render = function () {
     trEl.appendChild(tdEl);
     teEl.appendChild(trEl);
 
+
+    
+
 };
 
 
@@ -128,3 +123,29 @@ function renderAllStores() {
 
 };
 renderAllStores();
+
+
+
+var hourSum =[];
+function calcHourlyTotal() {
+    
+    
+    for(var j =0; j < stores[0].cookiesPerHour.length-1; j ++){
+        var sumHour=0
+
+    for (var i = 0; i<stores.length; i ++){
+ 
+ sumHour = stores[i].cookiesPerHour[j] + sumHour; //end up with hourSum =809
+ 
+};
+hourSum.push(sumHour);
+
+
+
+};//outer forloop
+
+
+};//function closes
+
+    calcHourlyTotal();
+console.log(hourSum);
