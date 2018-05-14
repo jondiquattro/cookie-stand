@@ -130,12 +130,12 @@ var hourSum =[];
 function calcHourlyTotal() {
     
     
-    for(var j =0; j < stores[0].cookiesPerHour.length-1; j ++){
+    for(var j =0; j < stores[0].cookiesPerHour.length; j ++){
         var sumHour=0
 
     for (var i = 0; i<stores.length; i ++){
  
- sumHour = stores[i].cookiesPerHour[j] + sumHour; //end up with hourSum =809
+ sumHour = Math.ceil(stores[i].cookiesPerHour[j] + sumHour); //end up with hourSum =809
  
 };
 hourSum.push(sumHour);
@@ -148,4 +148,29 @@ hourSum.push(sumHour);
 };//function closes
 
     calcHourlyTotal();
-console.log(hourSum);
+
+
+function renderBottomRow() {
+
+    
+    var teEl = document.getElementById('bottomRow');
+    var trEl = document.createElement('tr'); 
+    var thEl = document.createElement('th');
+        
+    thEl.textContent='Hourly Totals:';
+        trEl.appendChild(thEl);
+
+    for (var i = 0; i < openHours.length; i++) {
+        // create an element
+        var tdEl = document.createElement('td'); 
+        tdEl.textContent = hourSum[i]; 
+        trEl.appendChild(tdEl);
+    }//ends loop
+    tdEl = document.createElement('td');
+    tdEl.textContent = 'Hourly Total';
+
+    trEl.appendChild(tdEl);
+    teEl.appendChild(trEl);
+
+};
+renderBottomRow();
