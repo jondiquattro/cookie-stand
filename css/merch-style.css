@@ -1,0 +1,120 @@
+*{
+    font-weight: bold;
+}
+
+
+
+    /* th {
+        width: 60px;
+        border-style: solid;
+        border-width: 10px;
+        font-weight: bold;
+        background-color: rgb(232, 232, 232);
+        
+        } */
+    #bottomRow tr td {
+    width: 60px;
+    border-style: solid;
+    border-width: 10px;
+    font-weight: bold;
+    background-color: rgb(232, 232, 232);
+    
+    }
+
+/* body {
+background-color: rgb(241, 138, 124)
+} */
+
+#linksRow{
+    margin: 20px;
+width: 200px;
+}
+#upperDiv tr{
+height: 200px;
+width: 1000px;
+
+
+}
+
+header {
+    height: 100px;;
+    width: 100%;
+    background-image: url("../img/salmon.png");
+    background-size: 200px 98px;
+    background-color: rgb(232, 232, 232);
+}
+#bottomDiv {
+    margin-top: 10px;
+    border: 3px;
+    border-style: solid;
+    border-color: orange;
+    background-image: url("../img/fish.jpg");
+    
+    width: auto;
+    height: auto;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    opacity: 1;
+    font-weight: bolder;
+
+}
+header h1{
+    font-size: 55px;
+    
+    }
+    /* #banner{
+    
+    background-image: url("../img/salmon.png");
+    height: 15%;
+    width: 100px;
+    background-repeat: repeat-x;
+    
+    
+    } */
+    footer {
+        height: 100px;;
+        width: 100%;
+        background-image: url("../img/chinook.png");
+        background-size: 200px 98px;
+        background-color: rgb(232, 232, 232);
+    }
+    
+    #links li {
+        font-size: 30px;
+        display: inline;
+        /* border-style: solid; */
+        border-width: 3px;
+        margin: 100px;
+        
+    }
+    h1 {
+        font-size: 45px;
+        border-width: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      
+       
+    }
+    h2 {
+        font-size: 30px;
+        border-width: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }    
+    #stores {
+        /* margin-left: 20px; */
+        background-color: orange;
+        width: 400px;
+        padding: 20px; 
+
+    }
+    #tShirt {
+        background-color: orange;
+        width: 350px;
+        margin-left: 900px;
+        font-size: 24px;
+    }
+    #togo {
+        background-color: orange;
+        width: 350px;
+  margin-left: 20px;
+        font-size: 24px;
+    }
